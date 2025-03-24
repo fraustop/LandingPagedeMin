@@ -1,0 +1,120 @@
+/* Estilos globales */
+body {
+    margin: 0;
+    background-color: white; /* Fondo del cuerpo */
+    font-family: Arial, sans-serif; /* Fuente general */
+    color: #00008B; /* Letras azul oscuro */
+}
+
+/* Encabezado */
+header {
+    text-align: center;
+    padding: 20px;
+    background-color: black; /* Fondo negro */
+}
+
+h1 {
+    color: blue; /* Letras azules */
+    font-family: "Times New Roman", Times, serif; /* Fuente del título */
+    font-size: 50px; /* Tamaño del texto */
+}
+
+/* Galería de productos */
+.product-gallery {
+    display: flex; /* Flexbox para alineación horizontal */
+    justify-content: space-around; /* Espaciado entre elementos */
+    padding: 20px; /* Espaciado interno */
+    background-color: #f4f4f4; /* Fondo claro */
+}
+
+.canvas-block {
+    width: 200px; /* Ancho del bloque */
+    height: 150px; /* Alto del bloque */
+    background-color: #e0e0e0; /* Fondo gris claro */
+    border: 2px solid #00008B; /* Borde azul oscuro */
+    box-shadow: 3px 3px 6px gray; /* Sombra del bloque */
+    display: flex; /* Flexbox para centrar contenido */
+    justify-content: center; /* Centrado horizontal */
+    align-items: center; /* Centrado vertical */
+    font-family: Arial, sans-serif;
+    font-size: 16px; /* Tamaño del texto */
+    color: #00008B; /* Texto azul oscuro */
+    text-align: center; /* Centrado de texto */
+    cursor: pointer; /* Cambia el cursor al pasar sobre el bloque */
+    overflow: hidden; /* Oculta contenido desbordado */
+}
+
+/* Multipage: Sección de navegación */
+.tabs {
+    display: flex; /* Alineación horizontal */
+    justify-content: center; /* Centrado de botones */
+    margin-bottom: 10px; /* Espaciado inferior */
+}
+
+.tabs button {
+    margin: 0 5px; /* Espaciado entre botones */
+    padding: 10px 20px; /* Tamaño interno */
+    background-color: #00008B; /* Fondo azul oscuro */
+    color: white; /* Texto blanco */
+    border: none; /* Sin bordes */
+    cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
+    font-size: 16px; /* Tamaño del texto */
+}
+
+.tabs button:hover {
+    background-color: #4B0082; /* Fondo al pasar el mouse */
+}
+
+/* Multipage: Estilo de las páginas */
+.page {
+    background-color: #f9f9f9; /* Fondo claro */
+    padding: 20px; /* Espaciado interno */
+    border: 1px solid #ccc; /* Borde gris claro */
+    border-radius: 5px; /* Bordes redondeados */
+}
+
+/* Ocultar elementos con la clase .hidden */
+.hidden {
+    display: none; /* Ocultar elementos por defecto */
+}
+
+/* Modal */
+#form-modal {
+    position: fixed; /* Posiciona el modal sobre todo el contenido */
+    top: 0;
+    left: 0;
+    width: 100%; /* Ocupa todo el ancho de la ventana */
+    height: 100%; /* Ocupa todo el alto de la ventana */
+    background-color: rgba(0, 0, 0, 0.7); /* Fondo semi-transparente */
+    display: none; /* Oculto por defecto */
+    justify-content: center; /* Centrar contenido horizontalmente */
+    align-items: center; /* Centrar contenido verticalmente */
+    z-index: 9999; /* Asegura que el modal esté por encima de otros elementos */
+}
+
+.modal-content {
+    background-color: white; /* Fondo blanco */
+    padding: 20px;
+    width: 80%; /* Ancho del modal */
+    height: 80%; /* Alto del modal */
+    border-radius: 10px; /* Bordes redondeados */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3); /* Sombra alrededor del modal */
+    position: relative; /* Para posicionar el botón de cierre */
+    text-align: center;
+}
+
+.modal-content iframe {
+    width: 100%; /* Ocupa todo el ancho del modal */
+    height: 90%; /* Ocupa casi todo el alto del modal */
+    border: none; /* Sin bordes */
+}
+
+/* Botón de cierre del modal */
+.close {
+    display: inline-block; /* Botón visible */
+    background-color: red; /* Fondo rojo */
+    color: white; /* Texto blanco */
+    font-size: 16px; /* Tamaño del texto */
+    border: none; /* Sin bordes */
+    padding: 10px 20px; /* Tamaño interno */
+   

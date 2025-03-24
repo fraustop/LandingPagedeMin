@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Landing page sobre cómo crear tu propia página para vender.">
+    <meta name="keywords" content="landing page, geolocalización, formularios, almacenamiento en la nube, comunicación con clientes, HTML, CSS, JavaScript">
+    <meta name="author" content="Jazmin Hdz">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Tarea de Jazmin Hdz</title>
+    <link rel="stylesheet" href="styles.css">
+    <script defer src="scripts.js"></script>
+</head>
+<body>
+    <header>
+        <h1>Cómo crear tu propia página para vender</h1>
+    </header>
+    <main>
+        <section class="product-gallery">
+            <div class="canvas-block" id="location-block">Clic aquí para obtener la ubicación</div>
+            <div class="canvas-block" id="form-block">Clic aquí para ver información sobre formularios</div>
+            <div class="canvas-block" id="message-block">Clic aquí para escribir un mensaje</div>
+            <div class="canvas-block" id="cloud-storage-block">Clic aquí para ver almacenamiento en la nube</div>
+        </section>
+        <section id="multipage-section" class="hidden">
+            <!-- Botones de navegación -->
+            <div id="geo-tabs" class="tabs hidden">
+                <button id="geo-info-btn">Geolocalización API</button>
+                <button id="geo-usage-btn">Aplicaciones comunes</button>
+            </div>
+            <div id="form-tabs" class="tabs hidden">
+                <button id="form-info-btn">Uso de Formularios</button>
+            </div>
+            <div id="message-tabs" class="tabs hidden">
+                <button id="message-info-btn">Contactar Cliente</button>
+            </div>
+            <div id="cloud-tabs" class="tabs hidden">
+                <button id="cloud-info-btn">Utilidad del Almacenamiento</button>
+            </div>
+
+            <!-- Página de información de geolocalización -->
+            <div id="geo-info" class="page hidden">
+                <h2>Información sobre las APIs de Geolocalización</h2>
+                <p>Las APIs de Geolocalización permiten obtener la ubicación precisa del usuario usando GPS, Wi-Fi y redes celulares.</p>
+                <ul>
+                    <li>Servicios personalizados como transporte y navegación.</li>
+                    <li>Protección de privacidad mediante permisos explícitos.</li>
+                </ul>
+            </div>
+
+            <!-- Página de información sobre formularios -->
+            <div id="form-info" class="page hidden">
+                <h2>Información sobre el uso de Formularios</h2>
+                <p>Los formularios digitales permiten recopilar datos de manera eficiente. Algunos usos incluyen:</p>
+                <ul>
+                    <li>Encuestas de satisfacción.</li>
+                    <li>Registros e inscripciones.</li>
+                    <li>Solicitudes y recopilación de retroalimentación.</li>
+                </ul>
+            </div>
+
+            <!-- Página de contacto directo -->
+            <div id="message-info" class="page hidden">
+                <h2>Importancia de la comunicación directa con el cliente</h2>
+                <p>La comunicación directa con los clientes es esencial para:</p>
+                <ul>
+                    <li>Generar confianza y fidelidad.</li>
+                    <li>Resolver dudas de manera inmediata.</li>
+                    <li>Mejorar la experiencia general del cliente.</li>
+                </ul>
+                <p>Escribe tu mensaje para contactar al vendedor:</p>
+                <textarea id="message-box" rows="5" cols="50" placeholder="Escribe tu mensaje aquí..."></textarea>
+                <br><br>
+                <button id="send-email-button" class="cta-button">Contactar por correo electrónico</button>
+            </div>
+
+            <!-- Página de información sobre almacenamiento en la nube -->
+            <div id="cloud-info" class="page hidden">
+                <h2>Utilidad del almacenamiento en la nube</h2>
+                <p>El almacenamiento en la nube ofrece numerosas ventajas para usuarios y empresas:</p>
+                <ul>
+                    <li>Acceso desde cualquier lugar y dispositivo.</li>
+                    <li>Respaldo automático de datos importantes.</li>
+                    <li>Facilidad para compartir archivos con colaboradores o clientes.</li>
+                    <li>Ahorro de espacio físico y mejora en la organización.</li>
+                </ul>
+                <p>Puedes explorar esta carpeta en la nube para más ejemplos:</p>
+                <a href="https://1drv.ms/f/c/a7d82598120f0a25/Egz0iipcRedEpCRUkuqhoC8BBAZKMvMO3IKsbD7vW1cWwQ?e=RX2PbN" target="_blank" class="cta-button">Abrir carpeta en la nube</a>
+            </div>
+        </section>
+
+        <!-- Modal para mostrar el formulario -->
+        <div id="form-modal" class="hidden">
+            <div class="modal-content">
+                <button id="close-modal" class="close">Cerrar ✖</button>
+                <iframe src="https://forms.office.com/r/9cuLTiape6?embed=true" width="100%" height="90%" frameborder="0" allowfullscreen></iframe>
+            </div>
+        </div>
+    </main>
+</body>
+</html>
