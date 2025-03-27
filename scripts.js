@@ -30,18 +30,29 @@ document.getElementById("location-block").addEventListener("click", () => {
         }
     }
     
-            // Manejar clics en las pestañas para mostrar imágenes
+         // Manejar clics en las pestañas para mostrar imágenes
         const tabs = document.querySelectorAll(".image-tab");
         const activeImage = document.getElementById("active-image");
         
         tabs.forEach(tab => {
             tab.addEventListener("click", () => {
-                const imageName = tab.dataset.img;
+                const imageName = tab.dataset.img; // Nombre de la imagen, por ejemplo, Imagen1.png
                 const imagePath = `Elementos/${imageName}`; // Ruta relativa a la carpeta Elementos
-                activeImage.src = imagePath;
-                activeImage.style.display = "block"; // Mostrar imagen
+                
+                // Verifica si la imagen existe antes de mostrarla
+                activeImage.onerror = () => {
+                    alert(`La imagen "${imageName}" no se encuentra. Verifica el nombre y la ubicación.`);
+                    activeImage.style.display = "none"; // Oculta la imagen si no se encuentra
+                };
+        
+                activeImage.onload = () => {
+                    activeImage.style.display = "block"; // Muestra la imagen si se carga correctamente
+                };
+        
+                activeImage.src = imagePath; // Intenta cargar la imagen
             });
         });
+
     
     // Mostrar la sección multipage y contenido relacionado con geolocalización
     document.getElementById("multipage-section").classList.remove("hidden");
