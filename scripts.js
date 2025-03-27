@@ -30,28 +30,30 @@ document.getElementById("location-block").addEventListener("click", () => {
         }
     }
     
-         // Manejar clics en las pestañas para mostrar imágenes
-        const tabs = document.querySelectorAll(".image-tab");
-        const activeImage = document.getElementById("active-image");
-        
-        tabs.forEach(tab => {
-            tab.addEventListener("click", () => {
-                const imageName = tab.dataset.img; // Nombre de la imagen, por ejemplo, Imagen1.png
-                const imagePath = `Elementos/${imageName}`; // Ruta relativa a la carpeta Elementos
-                
-                // Verifica si la imagen existe antes de mostrarla
-                activeImage.onerror = () => {
-                    alert(`La imagen "${imageName}" no se encuentra. Verifica el nombre y la ubicación.`);
-                    activeImage.style.display = "none"; // Oculta la imagen si no se encuentra
-                };
-        
-                activeImage.onload = () => {
-                    activeImage.style.display = "block"; // Muestra la imagen si se carga correctamente
-                };
-        
-                activeImage.src = imagePath; // Intenta cargar la imagen
-            });
-        });
+       // Manejar clics en las pestañas para mostrar imágenes
+const tabs = document.querySelectorAll(".image-tab");
+const activeImage = document.getElementById("active-image");
+
+tabs.forEach(tab => {
+    tab.addEventListener("click", () => {
+        const imageName = tab.dataset.img; // Nombre de la imagen, por ejemplo, Imagen1.png
+        const imagePath = `Elementos/${imageName}`; // Ruta relativa a la carpeta Elementos
+
+        // Establece la ruta de la imagen
+        activeImage.src = imagePath;
+
+        // Maneja el evento onerror por si la imagen no se encuentra
+        activeImage.onerror = () => {
+            alert(`No se puede cargar la imagen "${imageName}". Verifica que esté en la carpeta correcta.`);
+            activeImage.style.display = "none"; // Oculta la imagen si no se puede cargar
+        };
+
+        // Muestra la imagen si se carga correctamente
+        activeImage.onload = () => {
+            activeImage.style.display = "block"; // Asegura que la imagen sea visible
+        };
+    });
+});
 
     
     // Mostrar la sección multipage y contenido relacionado con geolocalización
