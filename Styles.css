@@ -43,7 +43,46 @@ h1 {
     cursor: pointer; /* Cambia el cursor al pasar sobre el bloque */
     overflow: hidden; /* Oculta contenido desbordado */
 }
+/* Sección de pestañas e imágenes */
+#image-tabs-section {
+    margin: 20px auto; /* Margen superior e inferior */
+    padding: 10px;
+}
 
+#image-tabs {
+    display: flex; /* Flexbox para alineación horizontal */
+    justify-content: center;
+    flex-wrap: wrap; /* Permite ajustar si hay muchos botones */
+    padding: 10px;
+    background-color: #e0e0e0; /* Fondo claro */
+}
+
+.image-tab {
+    margin: 5px;
+    padding: 10px 20px;
+    background-color: #00008B; /* Fondo azul oscuro */
+    color: white; /* Texto blanco */
+    border: none;
+    border-radius: 5px; /* Bordes redondeados */
+    cursor: pointer; /* Cambia el cursor al pasar */
+    font-size: 14px; /* Tamaño del texto */
+}
+
+.image-tab:hover {
+    background-color: #4B0082; /* Fondo al pasar el mouse */
+}
+
+/* Contenedor de la imagen activa */
+#image-display {
+    text-align: center;
+    margin-top: 20px;
+}
+
+#active-image {
+    width: 300px; /* Ancho de la imagen */
+    height: auto; /* Ajuste proporcional */
+    display: none; /* Oculto por defecto */
+}
 /* Multipage: Sección de navegación */
 .tabs {
     display: flex; /* Alineación horizontal */
