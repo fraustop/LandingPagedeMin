@@ -37,7 +37,7 @@ const activeImage = document.getElementById("active-image");
 tabs.forEach(tab => {
     tab.addEventListener("click", () => {
         const imageName = tab.dataset.img; // Nombre de la imagen, por ejemplo, Imagen1.png
-        const imagePath = `Elementos/${imageName}`; // Ruta relativa a la carpeta Elementos
+        const imagePath = `${imageName}`; // Ruta relativa a la carpeta Elementos
         activeImage.style.display = "block"; // Muestra la imagen
         
         // Establece la ruta de la imagen
