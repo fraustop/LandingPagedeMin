@@ -29,7 +29,20 @@ document.getElementById("location-block").addEventListener("click", () => {
             alert("La geolocalización no es soportada por este navegador.");
         }
     }
-
+    
+            // Manejar clics en las pestañas para mostrar imágenes
+        const tabs = document.querySelectorAll(".image-tab");
+        const activeImage = document.getElementById("active-image");
+        
+        tabs.forEach(tab => {
+            tab.addEventListener("click", () => {
+                const imageName = tab.dataset.img;
+                const imagePath = `Elementos/${imageName}`; // Ruta relativa a la carpeta Elementos
+                activeImage.src = imagePath;
+                activeImage.style.display = "block"; // Mostrar imagen
+            });
+        });
+    
     // Mostrar la sección multipage y contenido relacionado con geolocalización
     document.getElementById("multipage-section").classList.remove("hidden");
     document.getElementById("geo-tabs").classList.remove("hidden");
