@@ -41,7 +41,7 @@ tabs.forEach(tab => {
         activeImage.style.display = "block"; // Muestra la imagen
         
         // Establece la ruta de la imagen
-        activeImage.src = imagePath;
+        activeImage.src = ${imagePath}/{imagename};
 
         // Maneja el evento onerror por si la imagen no se encuentra
         activeImage.onerror = () => {
